@@ -149,7 +149,7 @@
     }
   }
 
-  // Auto-close mobile menu when tapping any mobile link
+  // Auto-close mobile menu when tapping any mobile link, pressing Escape, or clicking outside
   function setupMobileMenuClose() {
     if (!mobileToggle) return;
     const allMobileLinks = document.querySelectorAll('.mobile-link, .mobile-sublink');
@@ -157,6 +157,20 @@
       link.addEventListener('click', function () {
         mobileToggle.checked = false;
       });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileToggle.checked) {
+        mobileToggle.checked = false;
+      }
+    });
+
+    // Close when tapping outside the header when menu is open
+    document.addEventListener('click', function (e) {
+      if (mobileToggle.checked && header && !header.contains(e.target)) {
+        mobileToggle.checked = false;
+      }
     });
   }
 

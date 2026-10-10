@@ -651,6 +651,9 @@
           </div>
 
           <!-- Comparative Matrix Table -->
+          <div class="table-scroll-hint" aria-hidden="true">
+            <span>↔ Swipe horizontally to compare all solutions</span>
+          </div>
           <div class="comparison-table-wrap">
             <table class="comparison-table">
               <thead>
@@ -1398,6 +1401,9 @@
                 </div>
                 <div>
                   <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Topic Assessment Form (TAF) Registration • <a
+                      href="documents/TAF%20doc/TAF_R26-IT-026_.pdf" target="_blank"
+                      rel="noopener" style="color: #38bdf8; text-decoration: underline;">View TAF (PDF)</a></div>
                   <div class="deliverable-item">✓ Project Charter &amp; Team Scope Definition • <a
                       href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf" target="_blank"
                       rel="noopener" style="color: #38bdf8; text-decoration: underline;">View Charter (PDF)</a></div>
@@ -1565,7 +1571,7 @@
           <span class="badge">Repository</span>
           <h2 class="section-title">Research <span class="text-gradient">Documents</span></h2>
           <p class="section-desc">
-            Access project charters, research proposals, checklists, research papers, and final
+            Access Topic Assessment Form (TAF), project charters, research proposals, checklists, research papers, and final
             academic reports.
           </p>
         </div>
@@ -1574,6 +1580,9 @@
         <div class="doc-filter-tabs">
           <input type="radio" name="doc-filter" id="doc-all" class="doc-radio" checked />
           <label for="doc-all" class="doc-tab-label">All Documents</label>
+
+          <input type="radio" name="doc-filter" id="doc-taf" class="doc-radio" />
+          <label for="doc-taf" class="doc-tab-label">Topic Assessment Form (TAF)</label>
 
           <input type="radio" name="doc-filter" id="doc-charter" class="doc-radio" />
           <label for="doc-charter" class="doc-tab-label">Project Charter</label>
@@ -1591,6 +1600,29 @@
           <label for="doc-checklist" class="doc-tab-label">Check Lists</label>
 
           <div class="doc-grid">
+            <!-- Topic Assessment Form (TAF) -->
+            <div class="glass-card doc-card" data-cat="taf">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-emerald">Topic Assessment (TAF)</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Topic Assessment Form (TAF)</h4>
+                <p class="doc-desc">Official SLIIT CDAP Topic Assessment Form approving and registering the research topic, project objectives, novelty breakdown, and supervisor endorsement for Group R26-IT-026.</p>
+                <div class="doc-meta-detail">
+                  <small>📋 Official Document • File: TAF_R26-IT-026_ (SLIIT)</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/TAF%20doc/TAF_R26-IT-026_.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View TAF</a>
+                  <a href="documents/TAF%20doc/TAF_R26-IT-026_.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
             <!-- Project Charter -->
             <div class="glass-card doc-card" data-cat="charter">
               <div class="doc-card-top">

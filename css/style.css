@@ -384,10 +384,14 @@ header.scrolled {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 10;
+  min-width: 44px;
+  min-height: 44px;
+  z-index: 520;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger-bar {
@@ -401,17 +405,26 @@ header.scrolled {
 
 .mobile-nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 4.5rem;
   left: 0;
   right: 0;
+  bottom: 0;
   background: rgba(2, 6, 23, 0.98);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.5rem 3rem 1.5rem;
   flex-direction: column;
-  max-height: 80vh;
+  max-height: calc(100vh - 4.5rem);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 499;
+}
+
+header.scrolled .mobile-nav {
+  top: 4.1rem;
+  max-height: calc(100vh - 4.1rem);
 }
 
 .mobile-toggle-checkbox:checked ~ .mobile-nav {
@@ -430,12 +443,14 @@ header.scrolled {
 }
 
 .mobile-link {
-  display: block;
-  padding: 0.6rem 0.75rem;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: var(--radius-sm);
   transition: all 0.2s ease;
 }
@@ -455,7 +470,9 @@ header.scrolled {
 }
 
 .mobile-sublink {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 38px;
   padding: 0.4rem 1rem;
   margin-left: 0.5rem;
   font-size: 0.8125rem;
@@ -886,8 +903,25 @@ header.scrolled {
 }
 
 /* Comparison Table */
+.table-scroll-hint {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--brand-cyan);
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px dashed rgba(6, 182, 212, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
 .comparison-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   margin-bottom: 2rem;
@@ -895,6 +929,7 @@ header.scrolled {
 
 .comparison-table {
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.8125rem;
@@ -1719,6 +1754,7 @@ header.scrolled {
 }
 
 /* Show/hide doc cards based on radio */
+#doc-taf:checked ~ .doc-grid .doc-card:not([data-cat="taf"]),
 #doc-charter:checked ~ .doc-grid .doc-card:not([data-cat="charter"]),
 #doc-proposal:checked ~ .doc-grid .doc-card:not([data-cat="proposal"]),
 #doc-research:checked ~ .doc-grid .doc-card:not([data-cat="research"]),
@@ -1981,6 +2017,10 @@ header.scrolled {
   color: var(--brand-cyan);
   text-decoration: none;
   transition: color 0.2s;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .team-email:hover {
@@ -2022,12 +2062,16 @@ header.scrolled {
   font-size: 0.8125rem;
   color: #e2e8f0;
   line-height: 2.2;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-link {
   color: var(--brand-cyan);
   text-decoration: none;
   transition: color 0.2s;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .contact-link:hover {
@@ -2191,70 +2235,8 @@ footer {
   gap: 1.25rem;
 }
 
-/* ==========================================================================
-   Responsive Media Queries
-   ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-title { font-size: 2.75rem; }
-  .hero-subtitle { font-size: 1.25rem; }
-  .grid-4, .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-layout { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .milestone-body { grid-template-columns: 1fr; }
-  .doc-grid { grid-template-columns: repeat(2, 1fr); }
-}
+/* Grid Layout Helpers */
 
-@media (max-width: 768px) {
-  .hero-title { font-size: 2rem; }
-  .hero-subtitle { font-size: 1rem; }
-  .section-title { font-size: 1.75rem; }
-  .nav-links { display: none; }
-  .mobile-toggle-label { display: flex; }
-  .metrics-strip { grid-template-columns: repeat(2, 1fr); }
-  .grid-2, .grid-3, .doc-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .novelty-heading { font-size: 1.25rem; }
-  .milestone-tabs { gap: 0.35rem; }
-  .ms-tab-label {
-    font-size: 0.7rem;
-    padding: 0.5rem 0.75rem;
-  }
-  .doc-filter-tabs { gap: 0.35rem; }
-  .doc-tab-label {
-    font-size: 0.7rem;
-    padding: 0.4rem 0.6rem;
-  }
-  .marks-breakdown {
-    flex-direction: column;
-    align-items: center;
-  }
-  .marks-item { min-width: 100%; }
-  .quick-links-strip { flex-direction: column; align-items: center; }
-  .supervisor-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 480px) {
-  .hero-title { font-size: 1.75rem; }
-  .section-padding { padding: 3rem 0; }
-  .glass-card { padding: 1.25rem; }
-  .milestone-card { padding: 1.25rem; }
-  .container { padding: 0 1rem; }
-  .metrics-strip { grid-template-columns: 1fr; }
-  .milestone-tabs {
-    flex-direction: column;
-  }
-  .ms-tab-label {
-    width: 100%;
-    text-align: center;
-  }
-  .doc-filter-tabs {
-    flex-direction: column;
-  }
-  .doc-tab-label {
-    width: 100%;
-    text-align: center;
-  }
-}
 
 /* ==========================================================================
    Section: The SmartCost Platform (#solution)
@@ -2602,33 +2584,327 @@ footer {
   line-height: 1.45;
 }
 
-/* Responsive adjustments for Solution */
-@media (max-width: 1024px) {
-  .engine-hub-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+/* ==========================================================================
+   Master Responsive Design System
+   Auto-adjusts cleanly across All Desktops, Laptops, Tablets & Mobile Phones
+   ========================================================================== */
+
+/* 1. Laptops & Small Desktops (1025px – 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1.25rem;
   }
-  .feature-modules-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-links {
+    gap: 0.15rem;
+  }
+  .nav-link {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.775rem;
+  }
+  .logo-sub {
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
-@media (max-width: 640px) {
+/* 2. Tablets, iPads & Hybrid Devices (769px – 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+  .mobile-toggle-label {
+    display: flex;
+  }
+  .logo-sub {
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-title {
+    font-size: clamp(2.2rem, 5vw, 2.75rem);
+  }
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+  .metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .doc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .milestone-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .engine-hub-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+  .engine-core-node {
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+  .industry-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+  }
   .feature-modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* 3. Tablets Portrait, Phablets & Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav-active-crumb {
+    display: none !important;
+  }
+  .logo-sub {
+    max-width: none;
+  }
+  .section-padding {
+    padding: 3.75rem 0;
+  }
+  .section-title {
+    font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+  }
+  .grid-2,
+  .grid-3 {
     grid-template-columns: 1fr;
   }
-  .solution-scrolly-text {
+  .doc-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .supervisor-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  .industry-col {
+    grid-template-columns: 1fr;
+  }
+  .table-scroll-hint {
+    display: flex;
+  }
+  .quick-links-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+  .marks-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+  .marks-item {
+    min-width: 0;
+    width: 100%;
+  }
+  .novelty-heading {
     font-size: 1.25rem;
   }
-  .core-circle {
-    width: 11rem;
-    height: 11rem;
+  .form-control {
+    font-size: 16px; /* Prevents iOS Safari automatic viewport zoom */
   }
-  .core-logo-box {
-    width: 3.75rem;
-    height: 3.75rem;
+}
+
+/* 4. Standard Mobile Phones (max-width: 640px) */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .glass-card {
+    padding: 1.25rem;
   }
   .modular-engine-card {
     padding: 1.25rem;
   }
+  .feature-modules-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .team-photo-wrap {
+    max-width: 260px;
+    margin: 0 auto 1.25rem auto;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .paper-actions {
+    flex-direction: column;
+  }
+  .paper-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .doc-actions {
+    flex-direction: column;
+  }
+  .doc-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .solution-scrolly-text {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  .core-circle {
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+  .core-logo-box {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .core-brand-name {
+    font-size: 1.05rem;
+  }
+  .engine-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .milestone-card {
+    padding: 1.25rem;
+  }
+  .milestone-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .milestone-title {
+    font-size: 1.3rem;
+    margin-top: 0.35rem;
+  }
+  .milestone-marks {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-sm);
+  }
+  .milestone-tabs {
+    gap: 0.35rem;
+  }
+  .ms-tab-label {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    flex: 1 1 calc(50% - 0.35rem);
+    text-align: center;
+  }
+  .marks-breakdown {
+    grid-template-columns: 1fr;
+  }
+  .doc-filter-tabs {
+    gap: 0.35rem;
+  }
+  .doc-tab-label {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.65rem;
+    flex: 1 1 calc(50% - 0.35rem);
+    text-align: center;
+  }
+  .quick-links-strip {
+    grid-template-columns: 1fr;
+  }
+  .quick-link-item {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .metrics-strip {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .metric-item {
+    padding: 1.5rem 1rem;
+  }
+  .metric-num {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
 }
+
+/* 5. Compact Mobile Phones (max-width: 400px) */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .logo-text {
+    font-size: 1.125rem;
+  }
+  .logo-img {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  .ms-tab-label,
+  .doc-tab-label {
+    flex: 1 1 100%;
+  }
+  .core-circle {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+  .core-logo-box {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+  .core-brand-name {
+    font-size: 0.95rem;
+  }
+  .glass-card {
+    padding: 1rem;
+  }
+}
+
