@@ -1,0 +1,13 @@
+# Dependencies & Build
+node_modules/
+.wrangler/
+dist/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+.system_generated/

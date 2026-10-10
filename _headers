@@ -1,0 +1,24 @@
+# Cloudflare Pages Headers Configuration
+# Global Security Headers
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Cache CSS and JS with revalidation
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Cache images and PDF documents
+/images/*
+  Cache-Control: public, max-age=604800
+
+/documents/*
+  Cache-Control: public, max-age=604800
+
+/presentations/*
+  Cache-Control: public, max-age=604800

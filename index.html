@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartCost (R26-IT-026) — AI-Driven POS &amp; Cost Analytics System</title>
+  <meta name="description"
+    content="SmartCost is a mobile-first, cloud-based business management platform designed for SMEs. University undergraduate research project at SLIIT." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/logo.jpg" />
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION (CSS-only mobile menu via checkbox hack)
+       ======================================================================== -->
+  <header>
+    <div class="nav-scroll-progress" id="nav-scroll-progress"></div>
+    <div class="container nav-container">
+      <a href="#home" class="logo-wrap">
+        <img src="images/logo.jpg" alt="SmartCost Logo" class="logo-img" />
+        <div>
+          <span class="logo-text">Smart<span class="brand-cyan">Cost</span></span>
+          <span class="logo-sub">RESEARCH PORTAL<span class="nav-active-crumb" id="nav-active-crumb"></span></span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#solution" class="nav-link">Solution</a></li>
+
+          <!-- Domain with CSS-only Dropdown -->
+          <li class="nav-item has-dropdown">
+            <a href="#domain" class="nav-link">Domain ▾</a>
+            <div class="dropdown-menu">
+              <span class="dropdown-header">Research Domain Subsections</span>
+              <a href="#literature-survey" class="dropdown-item">
+                <span class="dropdown-title">Literature Survey</span>
+                <span class="dropdown-desc">Existing systems &amp; paper comparisons</span>
+              </a>
+              <a href="#research-gap" class="dropdown-item">
+                <span class="dropdown-title">Research Gap</span>
+                <span class="dropdown-desc">Limitations of current approaches</span>
+              </a>
+              <a href="#research-problem" class="dropdown-item">
+                <span class="dropdown-title">Research Problem</span>
+                <span class="dropdown-desc">Academic framing of SME barriers</span>
+              </a>
+              <a href="#research-objectives" class="dropdown-item">
+                <span class="dropdown-title">Research Objectives</span>
+                <span class="dropdown-desc">Overarching and novelty goals</span>
+              </a>
+              <a href="#methodology" class="dropdown-item">
+                <span class="dropdown-title">Research Methodology</span>
+                <span class="dropdown-desc">Research pipeline &amp; validation</span>
+              </a>
+              <a href="#research-novelties" class="dropdown-item">
+                <span class="dropdown-title">Research Novelties</span>
+                <span class="dropdown-desc">Four core research contributions</span>
+              </a>
+              <a href="#technologies" class="dropdown-item">
+                <span class="dropdown-title">Technologies Used</span>
+                <span class="dropdown-desc">Full-stack &amp; AI toolchain</span>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-item"><a href="#milestones" class="nav-link">Milestones</a></li>
+          <li class="nav-item"><a href="#documents" class="nav-link">Documents</a></li>
+          <li class="nav-item"><a href="#presentations" class="nav-link">Presentations</a></li>
+          <li class="nav-item"><a href="#about-us" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#contact-us" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- CSS-only Mobile Hamburger (checkbox hack) -->
+      <input type="checkbox" id="mobile-toggle" class="mobile-toggle-checkbox" aria-label="Toggle navigation menu" />
+      <label for="mobile-toggle" class="mobile-toggle-label" aria-hidden="true">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+
+      <!-- Mobile Navigation (displayed via CSS :checked) -->
+      <div class="mobile-nav">
+        <a href="#home" class="mobile-link active">Home</a>
+        <a href="#solution" class="mobile-link">Solution</a>
+        <a href="#domain" class="mobile-link">Domain</a>
+        <a href="#literature-survey" class="mobile-sublink">↳ Literature Survey</a>
+        <a href="#research-gap" class="mobile-sublink">↳ Research Gap</a>
+        <a href="#research-problem" class="mobile-sublink">↳ Research Problem</a>
+        <a href="#research-objectives" class="mobile-sublink">↳ Research Objectives</a>
+        <a href="#methodology" class="mobile-sublink">↳ Methodology</a>
+        <a href="#research-novelties" class="mobile-sublink">↳ Research Novelties</a>
+        <a href="#technologies" class="mobile-sublink">↳ Technologies</a>
+        <a href="#milestones" class="mobile-link">Milestones</a>
+        <a href="#documents" class="mobile-link">Documents</a>
+        <a href="#presentations" class="mobile-link">Presentations</a>
+        <a href="#about-us" class="mobile-link">About Us</a>
+        <a href="#contact-us" class="mobile-link">Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========================================================================
+         1. HOME SECTION (#home)
+         ======================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <!-- Tagline -->
+        <div class="hero-tagline">
+          <span>✨</span>
+          <span>R26-IT-026</span>
+        </div>
+
+        <h1 class="hero-title">
+          SmartCost<br />
+          <span class="text-gradient">AI-Driven POS &amp; Cost Analytics System</span><br />
+          <span class="hero-subtitle">for Small &amp; Medium-Sized Enterprises (SMEs)</span>
+        </h1>
+
+        <!-- Abstract Card -->
+        <div class="glass-card hero-abstract-card">
+          <div class="abstract-meta">
+            <span class="abstract-tag">Project Abstract</span>
+            <span class="abstract-meta-sub">Undergraduate Academic Research</span>
+          </div>
+          <p class="abstract-text">
+            <strong>SmartCost</strong> is a mobile-first, cloud-based business management platform designed to help
+            small and medium-sized businesses manage their daily operations, understand business performance, and make
+            informed decisions through configurable business tools and data-driven research. Designed for SMEs such as
+            retail stores, restaurants, cafés, bakeries, and salons, it delivers configurable modules across
+            <strong>POS, inventory management, cost control, customer management, analytics, and reporting</strong>,
+            supported by 4 targeted research novelties.
+          </p>
+
+          <div class="industry-pills">
+            <span class="industry-pills-label">Configurable Multi-Industry Fit:</span>
+            <span class="industry-pill">🏪 Retail Stores</span>
+            <span class="industry-pill">🛒 Supermarkets</span>
+            <span class="industry-pill">🍽️ Restaurants</span>
+            <span class="industry-pill">☕ Cafés</span>
+            <span class="industry-pill">🥐 Bakeries</span>
+            <span class="industry-pill">✂️ Salons</span>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="btn-group">
+          <a href="#domain" class="btn btn-primary">
+            <span>Explore the Research</span>
+            <span>→</span>
+          </a>
+          <a href="#documents" class="btn btn-secondary">
+            <span>📄 View Project Documents</span>
+          </a>
+        </div>
+
+        <!-- Metrics Strip -->
+        <div class="metrics-strip">
+          <div class="glass-card metric-item">
+            <div class="metric-num">4<br />Novelties</div>
+            <div class="metric-label">Research Focus Areas</div>
+            <div class="metric-sub">Modular Academic Design</div>
+          </div>
+          <div class="glass-card metric-item">
+            <div class="metric-num">5+<br />Industries</div>
+            <div class="metric-label">Configurable Scope</div>
+            <div class="metric-sub">Retail, Food, Care &amp; More</div>
+          </div>
+          <div class="glass-card metric-item">
+            <div class="metric-num">Mobile-<br />First</div>
+            <div class="metric-label">Cloud-Based Architecture</div>
+            <div class="metric-sub">Runs on Standard Handhelds</div>
+          </div>
+          <div class="glass-card metric-item">
+            <div class="metric-num">Zero<br />Backend<br />Cost</div>
+            <div class="metric-label">Edge-First POS</div>
+            <div class="metric-sub">Designed for Budget SMEs</div>
+          </div>
+        </div>
+
+        <!-- Research Problem Preview -->
+        <div class="glass-card home-preview-card">
+          <span class="preview-tag">Research Problem Preview</span>
+          <h3 class="preview-title">Addressing SME Operational Challenges</h3>
+          <p class="preview-text">
+            Many small and medium-sized businesses rely on manual processes, disconnected tools, or software that may
+            not fully meet their needs for affordability, mobility, flexibility, and data-driven decision-making. This
+            research investigates how a mobile-first, cloud-based, configurable business management platform can support
+            SMEs while exploring intelligent approaches to demand prediction, customer insights, product
+            recommendations, and sales trend analysis.
+          </p>
+          <a href="#research-problem" class="btn btn-secondary btn-sm">Read Full Problem Statement →</a>
+        </div>
+
+        <!-- Proposed Solution Preview -->
+        <div class="glass-card home-preview-card">
+          <span class="preview-tag">Proposed Solution</span>
+          <h3 class="preview-title">Configurable Platform with Research-Driven Intelligence</h3>
+          <p class="preview-text">
+            SmartCost combines configurable business management tools (POS, inventory, cost management, customer
+            management, analytics, and reporting) with research into predictive analytics, customer insights,
+            intelligent product recommendations, and sales forecasting. The existing system features provide day-to-day
+            operational support, while the proposed research components explore data-driven enhancements for business
+            decision-making.
+          </p>
+          <a href="#solution" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">⚡ Explore The SmartCost
+            Platform Architecture →</a>
+        </div>
+
+        <!-- Research Novelties Preview Cards -->
+        <div class="section-header" style="margin-top: 4rem;">
+          <span class="badge">Research Novelties</span>
+          <h2 class="section-title">Four Core <span class="text-gradient">Research Contributions</span></h2>
+        </div>
+
+        <div class="grid-2 novelty-preview-grid">
+          <a href="#novelty-1" class="glass-card novelty-preview-card">
+            <span class="novelty-preview-num">01</span>
+            <h4 class="novelty-preview-title">Product Demand Prediction</h4>
+            <p class="novelty-preview-desc">Investigating machine learning techniques to predict future product demand
+              using historical sales data.</p>
+          </a>
+          <a href="#novelty-2" class="glass-card novelty-preview-card">
+            <span class="novelty-preview-num">02</span>
+            <h4 class="novelty-preview-title">Customer Behavior Analysis &amp; Sales Insights</h4>
+            <p class="novelty-preview-desc">Analyzing transaction data to identify purchasing patterns, popular
+              products, and peak sales periods.</p>
+          </a>
+          <a href="#novelty-3" class="glass-card novelty-preview-card">
+            <span class="novelty-preview-num">03</span>
+            <h4 class="novelty-preview-title">AI-Based Smart Order Recommendation</h4>
+            <p class="novelty-preview-desc">Investigating intelligent recommendations based on current cart and
+              historical transaction patterns.</p>
+          </a>
+          <a href="#novelty-4" class="glass-card novelty-preview-card">
+            <span class="novelty-preview-num">04</span>
+            <h4 class="novelty-preview-title">Sales Trend Analysis &amp; Forecasting</h4>
+            <p class="novelty-preview-desc">Investigating historical sales patterns to identify trends and support
+              business planning decisions.</p>
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links-strip">
+          <a href="#solution" class="quick-link-item">⚡ The SmartCost Platform</a>
+          <a href="#methodology" class="quick-link-item">📐 Research Methodology</a>
+          <a href="#documents" class="quick-link-item">📄 Research Documents</a>
+          <a href="#milestones" class="quick-link-item">📍 Project Milestones</a>
+          <a href="#presentations" class="quick-link-item">📊 Presentations</a>
+          <a href="#about-us" class="quick-link-item">👥 Meet the Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         2. THE SMARTCOST PLATFORM SOLUTION (#solution)
+         ======================================================================== -->
+    <section id="solution" class="section-padding">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <span class="badge"
+            style="background: rgba(99, 102, 241, 0.12); color: #818cf8; border-color: rgba(99, 102, 241, 0.3);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"
+              style="display: inline-block; vertical-align: middle; margin-right: 5px;">
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+            </svg>
+            OUR SOLUTION
+          </span>
+          <h2 class="section-title" style="font-size: 2.75rem; font-weight: 800; letter-spacing: -0.03em;">The SmartCost
+            Platform</h2>
+          <p class="section-desc" style="max-width: 680px; margin: 0 auto; color: #94a3b8;">
+            A unified, modular platform connecting diverse business types with intelligent feature modules.
+          </p>
+        </div>
+
+        <!-- Scrollytelling Reveal Tagline -->
+        <div class="solution-tagline-wrap">
+          <h3 class="solution-scrolly-text">
+            One unified architecture. Six commercial presets.<br />
+            Instant offline POS execution with continuous background machine learning.
+          </h3>
+        </div>
+
+        <!-- Centralized Modular Engine Showcase -->
+        <div class="modular-engine-card">
+          <!-- Header Inside Box -->
+          <div class="engine-card-header">
+            <div class="engine-header-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              </svg>
+              <span class="engine-title-tag">CENTRALIZED MODULAR ENGINE</span>
+            </div>
+            <span class="engine-pill-tag">One Engine • Multi-Industry</span>
+          </div>
+
+          <!-- Central Hub Grid -->
+          <div class="engine-hub-grid">
+            <!-- Left 3 Industries -->
+            <div class="industry-col">
+              <!-- Retail Stores -->
+              <div class="industry-item blue">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" />
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                    <path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" />
+                    <path d="M2 7h20" />
+                    <path
+                      d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Retail Stores</h4>
+                  <p class="industry-desc">POS, Barcode &amp; Stock sync</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Restaurants -->
+              <div class="industry-item orange">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fb923c" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8Z" />
+                    <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7" />
+                    <path d="m2.1 21.8 6.4-6.3" />
+                    <path d="m19 5-7 7" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Restaurants</h4>
+                  <p class="industry-desc">Table billing &amp; Menu tracking</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Cafés -->
+              <div class="industry-item amber">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v2" />
+                    <path d="M14 2v2" />
+                    <path
+                      d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h12Zm0 0h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1" />
+                    <path d="M6 2v2" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Cafés</h4>
+                  <p class="industry-desc">Fast-order &amp; Loyalty points</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Central SmartCost Core Node -->
+            <div class="engine-core-node">
+              <div class="core-pulse-aura"></div>
+              <div class="core-orbit-ring-1"></div>
+              <div class="core-orbit-ring-2"></div>
+
+              <div class="core-circle">
+                <div class="core-logo-box">
+                  <img src="images/logo.jpg" alt="SmartCost Core SaaS Engine" class="core-logo-img" />
+                </div>
+                <span class="core-brand-name">SmartCost</span>
+                <span class="core-sub-badge">CENTRAL SAAS ENGINE</span>
+              </div>
+            </div>
+
+            <!-- Right 3 Industries -->
+            <div class="industry-col">
+              <!-- Bakeries -->
+              <div class="industry-item right pink">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="7" r="2" />
+                    <path d="M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-6-7-8l-3.6 2.6" />
+                    <path d="M16 13H3" />
+                    <path d="M16 17H3" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Bakeries</h4>
+                  <p class="industry-desc">Batch costing &amp; Freshness</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Salons -->
+              <div class="industry-item right purple">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="6" cy="6" r="3" />
+                    <path d="M8.12 8.12 12 12" />
+                    <path d="M20 4 8.12 15.88" />
+                    <circle cx="6" cy="18" r="3" />
+                    <path d="M14.8 14.8 20 20" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Salons</h4>
+                  <p class="industry-desc">Service catalog &amp; Appointments</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Service Businesses -->
+              <div class="industry-item right emerald">
+                <div class="industry-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="7" rx="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                  </svg>
+                </div>
+                <div class="industry-text">
+                  <h4 class="industry-title">Service Businesses</h4>
+                  <p class="industry-desc">Custom jobs &amp; Expense control</p>
+                </div>
+                <svg class="industry-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Modules Section -->
+        <div>
+          <div class="feature-modules-header">
+            <span class="badge"
+              style="background: rgba(255, 255, 255, 0.05); color: #cbd5e1; border-color: rgba(255, 255, 255, 0.1);">
+              PLUG &amp; PLAY MODULES
+            </span>
+            <h3 style="font-size: 2rem; font-weight: 800; color: #ffffff; margin-top: 0.6rem; letter-spacing: -0.02em;">
+              Configurable Feature Modules
+            </h3>
+            <p
+              style="font-size: 0.95rem; color: #94a3b8; margin-top: 0.5rem; max-width: 620px; margin-left: auto; margin-right: auto;">
+              Each business can enable only the tools they need while keeping operations unified.
+            </p>
+          </div>
+
+          <div class="feature-modules-grid">
+            <!-- 1. POS Billing -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(56, 189, 248, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="21" r="1" />
+                    <circle cx="19" cy="21" r="1" />
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">POS Billing</h4>
+                <p class="feature-module-desc">Fast &amp; intuitive checkout</p>
+              </div>
+            </div>
+
+            <!-- 2. Inventory Management -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(52, 211, 153, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m7.5 4.27 9 5.15" />
+                    <path
+                      d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">Inventory Management</h4>
+                <p class="feature-module-desc">Live stock tracking</p>
+              </div>
+            </div>
+
+            <!-- 3. Cost Management -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(251, 191, 36, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" x2="12" y1="2" y2="22" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">Cost Management</h4>
+                <p class="feature-module-desc">Expense &amp; margin analysis</p>
+              </div>
+            </div>
+
+            <!-- 4. Real-time Analytics -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(34, 211, 238, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 3v18h18" />
+                    <path d="m19 9-5 5-4-4-3 3" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">Real-time Analytics</h4>
+                <p class="feature-module-desc">Live sales performance</p>
+              </div>
+            </div>
+
+            <!-- 5. KPI Dashboard -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(129, 140, 248, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">KPI Dashboard</h4>
+                <p class="feature-module-desc">Executive business metrics</p>
+              </div>
+            </div>
+
+            <!-- 6. Customer CRM -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(192, 132, 252, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">Customer CRM</h4>
+                <p class="feature-module-desc">Purchase history &amp; loyalty</p>
+              </div>
+            </div>
+
+            <!-- 7. AI Insights -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(244, 114, 182, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                    <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                    <path d="M12 18v4" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">AI Insights</h4>
+                <p class="feature-module-desc">Demand &amp; order recommendations</p>
+              </div>
+            </div>
+
+            <!-- 8. Marketing & SMS -->
+            <div class="feature-module-card">
+              <div>
+                <div class="feature-icon-wrap" style="background: rgba(251, 113, 133, 0.12);">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fb7185" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m3 11 18-5v12L3 14v-3z" />
+                    <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+                  </svg>
+                </div>
+                <h4 class="feature-module-title">Marketing &amp; SMS</h4>
+                <p class="feature-module-desc">Automated customer outreach</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. DOMAIN SECTION (#domain)
+         ======================================================================== -->
+    <section id="domain" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Research Domain</span>
+          <h2 class="section-title">Research Domain &amp; <span class="text-gradient">Academic Foundation</span></h2>
+          <p class="section-desc">
+            Detailed academic domain exploration structuring literature findings, research gaps, formal problem framing,
+            approved research objectives, methodology, novelties, and technologies used.
+          </p>
+        </div>
+
+        <!-- Domain Sub-navigation -->
+        <div class="domain-subnav">
+          <a href="#literature-survey" class="domain-subnav-btn">Literature Survey</a>
+          <a href="#research-gap" class="domain-subnav-btn">Research Gap</a>
+          <a href="#research-problem" class="domain-subnav-btn">Research Problem</a>
+          <a href="#research-objectives" class="domain-subnav-btn">Research Objectives</a>
+          <a href="#methodology" class="domain-subnav-btn">Methodology</a>
+          <a href="#research-novelties" class="domain-subnav-btn">Research Novelties</a>
+          <a href="#technologies" class="domain-subnav-btn">Technologies</a>
+        </div>
+
+        <!-- 2.1 Literature Survey -->
+        <div id="literature-survey" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.1 • State of the Art</span>
+            <h3 class="sub-title">Literature Survey &amp; Comparative Analysis</h3>
+            <p class="sub-desc">
+              Survey of existing retail management systems, published academic methodologies, and comparative evaluation
+              against traditional commercial POS tools.
+            </p>
+          </div>
+
+          <!-- Comparative Matrix Table -->
+          <div class="comparison-table-wrap">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Evaluation Criteria</th>
+                  <th class="col-manual">Manual / Spreadsheet</th>
+                  <th class="col-enterprise">Enterprise Cloud POS</th>
+                  <th class="col-smartcost">SmartCost (Proposed)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="criteria-cell">Hardware Cost &amp; Accessibility</td>
+                  <td>Paper ledgers &amp; spreadsheets (High human error, no upfront hardware)</td>
+                  <td>Proprietary heavy hardware terminals (High upfront cost + maintenance)</td>
+                  <td class="highlight">Mobile-first, runs on any existing smartphone or tablet ($0 hardware investment)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="criteria-cell">Predictive Intelligence</td>
+                  <td>Gut-feeling guessing; high stockout and spoilage rates</td>
+                  <td>Basic retrospective descriptive charts; no on-device proactive ML</td>
+                  <td class="highlight">Lightweight AI models for demand prediction &amp; smart recommendations</td>
+                </tr>
+                <tr>
+                  <td class="criteria-cell">Configuration &amp; Multi-Industry Fit</td>
+                  <td>Completely manual bookkeeping; difficult to scale or adapt</td>
+                  <td>Rigid industry silos (separate software for café vs salon vs retail)</td>
+                  <td class="highlight">Modular configurable architecture adapting to Retail, Restaurants, Bakeries,
+                    Salons</td>
+                </tr>
+                <tr>
+                  <td class="criteria-cell">Network Dependency &amp; Offline Execution</td>
+                  <td>100% manual offline, zero cloud aggregation</td>
+                  <td>Strict continuous cloud connectivity required; fails on outages</td>
+                  <td class="highlight">Edge-local offline capability with automatic background cloud sync</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Research Papers & Academic Publications -->
+          <h4 class="subsection-label">
+            Research Papers &amp; Academic Publications
+          </h4>
+          <p class="section-desc" style="margin-bottom: 1.5rem; text-align: left;">
+            Peer-reviewed research papers produced by the SmartCost research cohort, detailing our architectural design,
+            machine learning models, and empirical benchmark evaluations.
+          </p>
+
+          <div class="grid-2">
+            <!-- Main Group Research Paper -->
+            <div class="glass-card paper-card" style="grid-column: 1 / -1;">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="tag-badge tag-purple">Main Research Paper • Integrated Architecture</span>
+                <span class="doc-status-badge status-completed">Published / IEEE</span>
+              </div>
+              <h5 class="paper-title" style="font-size: 1.15rem;">SmartCost: A Hybrid AI-Driven POS and Cost Analytics
+                System for Micro-SMEs</h5>
+              <p class="paper-meta">K.A.C.H Kodithuwakku, M.P.J.R. Dasanayaka, D.D.M Jayasingha, Deemantha Siriwardana,
+                N.K.M. Perera, Ayesha Wijesooriya • SLIIT Faculty of Computing</p>
+              <p class="paper-summary">
+                Presents the integrated SmartCost mobile analytics platform uniting point-of-sale operations, cost
+                control, demand forecasting, business performance prediction, customer analytics, and real-time checkout
+                recommendations. Evaluated on over 15,000 transactions across 128 products, achieving 91% demand
+                forecasting accuracy, 82% recommendation confidence, and 18% inventory waste reduction.
+              </p>
+              <div class="paper-actions">
+                <a href="documents/Research%20papers/R26-IT-026_Research%20paper.pdf" class="btn btn-secondary btn-sm"
+                  target="_blank" rel="noopener">📄 View Paper</a>
+                <a href="documents/Research%20papers/R26-IT-026_Research%20paper.pdf" class="btn btn-primary btn-sm"
+                  download>⬇️ Download PDF</a>
+              </div>
+            </div>
+
+            <!-- Novelty 1 Paper -->
+            <div class="glass-card paper-card">
+              <span class="tag-badge tag-purple">Research Paper #01 • Demand Forecasting</span>
+              <h5 class="paper-title">SmartCost: Product Demand Prediction System for Micro-SMEs</h5>
+              <p class="paper-meta">D.D.M Jayasingha (IT22162250), K.A.C.H Kodithuwakku, M.P.J.R. Dasanayaka, Deemantha
+                Siriwardana, N.K.M. Perera, Ayesha Wijesooriya</p>
+              <p class="paper-summary">
+                Evaluates ARIMA and Prophet forecasting models on 2-year daily sales records for 50 products. Prophet
+                achieved an 8.7% MAPE (vs 12.4% for ARIMA) and reduced RMSE by 18%, yielding a 14% reduction in
+                inventory waste.
+              </p>
+              <div class="paper-actions">
+                <a href="documents/Research%20papers/IT22162250.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                  rel="noopener">📄 View Paper</a>
+                <a href="documents/Research%20papers/IT22162250.pdf" class="btn btn-primary btn-sm" download>⬇️ Download
+                  PDF</a>
+              </div>
+            </div>
+
+            <!-- Novelty 2 Paper -->
+            <div class="glass-card paper-card">
+              <span class="tag-badge tag-emerald">Research Paper #02 • Customer Analytics</span>
+              <h5 class="paper-title">SmartCost: Customer Behavior Analysis &amp; Sales Insights System for Micro-SMEs
+              </h5>
+              <p class="paper-meta">N.K.M. Perera (IT22151810), K.A.C.H Kodithuwakku, M.P.J.R. Dasanayake, D.D.M
+                Jayasingha, Deemantha Siriwardana, Ayesha Wijesooriya</p>
+              <p class="paper-summary">
+                Applies transactional data mining, RFM segmentation, K-Means clustering, and Mann-Kendall trend analysis
+                on 15,420 transactions. Achieved 91% trend accuracy and 82% association rule confidence, boosting sales
+                by 11%.
+              </p>
+              <div class="paper-actions">
+                <a href="documents/Research%20papers/IT22151810.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                  rel="noopener">📄 View Paper</a>
+                <a href="documents/Research%20papers/IT22151810.pdf" class="btn btn-primary btn-sm" download>⬇️ Download
+                  PDF</a>
+              </div>
+            </div>
+
+            <!-- Novelty 3 Paper -->
+            <div class="glass-card paper-card">
+              <span class="tag-badge tag-amber">Research Paper #03 • Recommendation Engine</span>
+              <h5 class="paper-title">SmartCost: Smart Order Recommendation System for Micro-SMEs</h5>
+              <p class="paper-meta">M.P.J.R. Dasanayaka (IT22152664), K.A.C.H Kodithuwakku, D.D.M Jayasingha, Deemantha
+                Siriwardana, N.K.M. Perera, Ayesha Wijesooriya</p>
+              <p class="paper-summary">
+                Real-time POS checkout product recommendation engine using Apriori association rule mining. Achieved 84%
+                precision, 79% recall, and 142 ms response latency, enhancing cross-selling effectiveness by 18%.
+              </p>
+              <div class="paper-actions">
+                <a href="documents/Research%20papers/IT22152664.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                  rel="noopener">📄 View Paper</a>
+                <a href="documents/Research%20papers/IT22152664.pdf" class="btn btn-primary btn-sm" download>⬇️ Download
+                  PDF</a>
+              </div>
+            </div>
+
+            <!-- Novelty 4 Paper -->
+            <div class="glass-card paper-card">
+              <span class="tag-badge tag-cyan">Research Paper #04 • Performance Prediction</span>
+              <h5 class="paper-title">SmartCost: Business Performance Prediction System for Micro-SMEs</h5>
+              <p class="paper-meta">K.A.C.H Kodithuwakku (IT22544872), M.P.J.R. Dasanayaka, D.D.M Jayasingha, Deemantha
+                Siriwardana, N.K.M. Perera, Ayesha Wijesooriya</p>
+              <p class="paper-summary">
+                Couples demand forecasting with ingredient-level cost modeling to predict COGS, profit, and margins.
+                Achieved 6.4% margin prediction error and 89% precision for low-margin risk alert generation.
+              </p>
+              <div class="paper-actions">
+                <a href="documents/Research%20papers/IT22544872.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                  rel="noopener">📄 View Paper</a>
+                <a href="documents/Research%20papers/IT22544872.pdf" class="btn btn-primary btn-sm" download>⬇️ Download
+                  PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.2 Research Gap -->
+        <div id="research-gap" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.2 • Critical Gaps</span>
+            <h3 class="sub-title">Identified Research Gaps</h3>
+            <p class="sub-desc">
+              Limitations identified during domain inquiry. These are provisional findings that will be refined as the
+              literature review progresses.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="glass-card gap-card">
+              <div class="gap-card-header">
+                <span class="tag-badge tag-cyan">Provisional Finding</span>
+                <span class="gap-num">Gap 01</span>
+              </div>
+              <h4 class="gap-title">Enterprise-Biased AI Model Complexity</h4>
+              <div class="academic-subcard subcard-red">
+                <span class="academic-subcard-label label-red">Existing Limitation</span>
+                <p class="subcard-text">State-of-the-art predictive algorithms assume high-performance server clusters
+                  and vast enterprise data warehouses, limiting their applicability to resource-constrained SMEs.</p>
+              </div>
+              <div class="academic-subcard subcard-cyan">
+                <span class="academic-subcard-label label-cyan">SmartCost Research Direction</span>
+                <p class="subcard-text">Investigating lightweight ML models capable of practical inference on standard
+                  mobile devices for SME use.</p>
+              </div>
+            </div>
+
+            <div class="glass-card gap-card">
+              <div class="gap-card-header">
+                <span class="tag-badge tag-cyan">Provisional Finding</span>
+                <span class="gap-num">Gap 02</span>
+              </div>
+              <h4 class="gap-title">Prohibitive Cost &amp; Hardware Requirements</h4>
+              <div class="academic-subcard subcard-red">
+                <span class="academic-subcard-label label-red">Existing Limitation</span>
+                <p class="subcard-text">Modern cloud POS solutions charge steep per-terminal monthly fees and require
+                  proprietary hardware lock-in, making them inaccessible for micro-merchants.</p>
+              </div>
+              <div class="academic-subcard subcard-cyan">
+                <span class="academic-subcard-label label-cyan">SmartCost Research Direction</span>
+                <p class="subcard-text">Delivering a mobile-first cloud system running on merchants' existing
+                  smartphones without recurring hardware costs.</p>
+              </div>
+            </div>
+
+            <div class="glass-card gap-card">
+              <div class="gap-card-header">
+                <span class="tag-badge tag-cyan">Provisional Finding</span>
+                <span class="gap-num">Gap 03</span>
+              </div>
+              <h4 class="gap-title">Lack of Mobile-First SME Business Management</h4>
+              <div class="academic-subcard subcard-red">
+                <span class="academic-subcard-label label-red">Existing Limitation</span>
+                <p class="subcard-text">Most business management platforms are designed for desktop environments,
+                  offering limited or secondary mobile experiences unsuitable for on-the-go SME operations.</p>
+              </div>
+              <div class="academic-subcard subcard-cyan">
+                <span class="academic-subcard-label label-cyan">SmartCost Research Direction</span>
+                <p class="subcard-text">Investigating a mobile-first architecture approach where the primary interaction
+                  model is designed for smartphones and tablets.</p>
+              </div>
+            </div>
+
+            <div class="glass-card gap-card">
+              <div class="gap-card-header">
+                <span class="tag-badge tag-cyan">Provisional Finding</span>
+                <span class="gap-num">Gap 04</span>
+              </div>
+              <h4 class="gap-title">Limited Data-Driven Decision Support for SMEs</h4>
+              <div class="academic-subcard subcard-red">
+                <span class="academic-subcard-label label-red">Existing Limitation</span>
+                <p class="subcard-text">Small businesses typically lack access to analytical tools that transform their
+                  transactional data into actionable business intelligence and forward-looking insights.</p>
+              </div>
+              <div class="academic-subcard subcard-cyan">
+                <span class="academic-subcard-label label-cyan">SmartCost Research Direction</span>
+                <p class="subcard-text">Exploring demand prediction, customer behavior analysis, smart recommendations,
+                  and sales trend forecasting specifically for SME data scales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.3 Research Problem -->
+        <div id="research-problem" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.3 • Academic Framing</span>
+            <h3 class="sub-title">Research Problem Statement</h3>
+            <p class="sub-desc">Academic framing of the operational and economic challenges faced by small and medium
+              enterprises.</p>
+          </div>
+
+          <div class="glass-card problem-card">
+            <p class="problem-text">
+              Many small and medium-sized businesses rely on manual processes, disconnected tools, or software that may
+              not fully meet their needs for affordability, mobility, flexibility, and data-driven decision-making. This
+              research investigates how a mobile-first, cloud-based, configurable business management platform can
+              support SMEs while exploring intelligent approaches to demand prediction, customer insights, product
+              recommendations, and sales trend analysis.
+            </p>
+            <div class="problem-note">
+              <strong>Academic Research Framing:</strong> This study focuses specifically on the challenges faced by
+              SMEs using manual or fragmented processes that lack mobile-first flexibility, intelligent decision-making,
+              and budget feasibility. The wording remains editable and will be updated to match the final approved
+              research problem.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.4 Research Objectives -->
+        <div id="research-objectives" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.4 • Project Goals</span>
+            <h3 class="sub-title">Research Objectives</h3>
+            <p class="sub-desc">
+              Main overarching project objective and four specific research goals corresponding to project novelties.
+              These are draft objectives pending final approval.
+            </p>
+          </div>
+
+          <!-- Main Objective Card -->
+          <div class="glass-card main-objective-card">
+            <span class="objective-label">🎯 Main Research Objective (Draft)</span>
+            <h4 class="objective-text">
+              To design, develop, and evaluate a mobile-first, cloud-based, configurable, multi-industry business
+              management and Point of Sale (POS) platform supported by data-driven research components for small and
+              medium-sized enterprises.
+            </h4>
+            <p class="objective-sub">
+              The platform aims to unify POS, inventory tracking, cost management, customer insight mining, and
+              reporting into an accessible interface deployable on everyday mobile hardware.
+            </p>
+          </div>
+
+          <!-- Specific Objectives Grid -->
+          <div class="grid-2">
+            <div class="glass-card">
+              <span class="tag-badge tag-purple">Specific Objective 01</span>
+              <h5 class="objective-item-title">Product Demand Prediction</h5>
+              <p class="objective-item-desc">To investigate an ML-based demand forecasting approach using historical
+                sales records to predict upcoming product demand and support inventory management decisions.</p>
+            </div>
+            <div class="glass-card">
+              <span class="tag-badge tag-emerald">Specific Objective 02</span>
+              <h5 class="objective-item-title">Customer Behavior Analysis &amp; Insights</h5>
+              <p class="objective-item-desc">To design an analytical approach that examines customer purchasing habits,
+                identifies peak commercial windows, and surfaces actionable sales intelligence patterns.</p>
+            </div>
+            <div class="glass-card">
+              <span class="tag-badge tag-amber">Specific Objective 03</span>
+              <h5 class="objective-item-title">AI-Based Smart Order Recommendation</h5>
+              <p class="objective-item-desc">To develop a recommendation approach that analyzes current cart contents
+                against historical item affinities to suggest relevant supplementary items during checkout.</p>
+            </div>
+            <div class="glass-card">
+              <span class="tag-badge tag-cyan">Specific Objective 04</span>
+              <h5 class="objective-item-title">Sales Trend Analysis &amp; Forecasting</h5>
+              <p class="objective-item-desc">To build an analytical module that examines longitudinal sales data to
+                identify trends, support business planning, and provide viability guidance.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.5 Methodology -->
+        <div id="methodology" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.5 • Research Framework</span>
+            <h3 class="sub-title">Research Methodology</h3>
+            <p class="sub-desc">
+              Structured research process from literature review to system validation. Stages are marked as proposed, in
+              progress, or completed.
+            </p>
+          </div>
+
+          <div class="methodology-timeline">
+            <div class="method-step">
+              <div class="method-step-num">01</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Literature Review &amp; Problem Identification</div>
+                <div class="method-step-desc">Survey existing systems, identify gaps, and frame the research problem.
+                </div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">02</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Research Design &amp; Objectives</div>
+                <div class="method-step-desc">Define main and specific research objectives aligned with identified gaps.
+                </div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">03</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Data Collection &amp; Dataset Preparation</div>
+                <div class="method-step-desc">Collect POS transaction logs, customer data, and prepare structured
+                  datasets.</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">04</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Data Cleaning &amp; Preprocessing</div>
+                <div class="method-step-desc">Outlier removal, normalization, feature engineering, and lag vector
+                  computation.</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">05</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Model Selection &amp; Development</div>
+                <div class="method-step-desc">Select and develop appropriate ML models for each research novelty.</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">06</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Training &amp; Testing</div>
+                <div class="method-step-desc">Train models on prepared datasets, perform cross-validation and hold-out
+                  testing.</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">07</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Evaluation Metrics</div>
+                <div class="method-step-desc">Apply appropriate evaluation metrics (MAPE, RMSE, Precision@K, Recall@K,
+                  NDCG@K, etc.).</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">08</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Comparison with Baseline Methods</div>
+                <div class="method-step-desc">Compare against baselines (e.g., Apriori vs FP-Growth) where applicable.
+                </div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">09</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Integration &amp; Validation</div>
+                <div class="method-step-desc">Validate within the SmartCost platform context; test with real SME
+                  scenarios.</div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+            <div class="method-step">
+              <div class="method-step-num">10</div>
+              <div class="method-step-content">
+                <div class="method-step-title">Results, Discussion &amp; Limitations</div>
+                <div class="method-step-desc">Analyze results, discuss findings, identify limitations and future work.
+                </div>
+                <span class="method-status status-proposed-label">Proposed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.6 Research Novelties (within Domain) -->
+        <div id="research-novelties" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.6 • Research Pillars</span>
+            <h3 class="sub-title">Four Core Research Novelties</h3>
+            <p class="sub-desc">
+              Detailed academic descriptions of the four foundational research contributions of the SmartCost project.
+            </p>
+          </div>
+
+          <!-- Novelty 1 -->
+          <div id="novelty-1" class="novelty-card glass-card">
+            <div class="novelty-content">
+              <div class="novelty-meta-header">
+                <span class="novelty-num">01</span>
+                <span class="tag-badge tag-purple">Novelty #01</span>
+                <span class="novelty-status">Proposed Research</span>
+              </div>
+              <h3 class="novelty-heading">Product Demand Prediction</h3>
+              <div class="novelty-tagline">Lead Researcher: D.D.M. Jayasingha (IT22162250)</div>
+              <p class="novelty-desc">
+                Investigate the use of historical sales data and machine learning techniques to predict future product
+                demand, with the aim of reducing stock shortages and overstocking.
+              </p>
+
+              <details class="novelty-details">
+                <summary>View Research Focus &amp; Details</summary>
+                <div class="novelty-details-content">
+                  <h5>Research Focus Areas:</h5>
+                  <ul>
+                    <li>Historical sales patterns and product demand trends</li>
+                    <li>Data preprocessing and feature selection</li>
+                    <li>Prediction model development</li>
+                    <li>Forecast evaluation using appropriate metrics</li>
+                    <li>Potential reduction of stock shortages and overstocking</li>
+                  </ul>
+                  <div class="placeholder-block"
+                    style="background: rgba(139, 92, 246, 0.08); border-color: rgba(139, 92, 246, 0.3);">
+                    <strong style="color: #c084fc;">Research Paper Methodology &amp; Benchmarks:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                      <li><strong>Models Evaluated:</strong> Prophet (Additive Time-Series) vs. ARIMA baseline</li>
+                      <li><strong>Dataset:</strong> 24-month daily sales, 50 products, 24,000+ transaction records
+                        (80-150 daily orders)</li>
+                      <li><strong>Evaluation Metrics:</strong> MAE, RMSE, MAPE (across 1-day &amp; 7-day forecast
+                        horizons)</li>
+                      <li><strong>Empirical Results:</strong> Prophet achieved <strong>8.7% MAPE</strong> (vs 12.4%
+                        ARIMA), 18% RMSE reduction, 14% inventory waste reduction</li>
+                      <li><strong>Research Paper:</strong> <a href="documents/Research%20papers/IT22162250.pdf"
+                          target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">SmartCost:
+                          Product Demand Prediction System for Micro-SMEs (PDF)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Novelty 2 -->
+          <div id="novelty-2" class="novelty-card glass-card">
+            <div class="novelty-content">
+              <div class="novelty-meta-header">
+                <span class="novelty-num">02</span>
+                <span class="tag-badge tag-emerald">Novelty #02</span>
+                <span class="novelty-status">Proposed Research</span>
+              </div>
+              <h3 class="novelty-heading">Customer Behavior Analysis and Sales Insights</h3>
+              <div class="novelty-tagline">Lead Researcher: Perera N.K.M (IT22151810)</div>
+              <p class="novelty-desc">
+                Investigate how historical transaction and customer data can be analyzed to identify useful patterns for
+                business decision-making.
+              </p>
+
+              <details class="novelty-details">
+                <summary>View Research Focus &amp; Details</summary>
+                <div class="novelty-details-content">
+                  <h5>Research Focus Areas:</h5>
+                  <ul>
+                    <li>Customer purchasing patterns and frequency</li>
+                    <li>Popular and slow-moving products identification</li>
+                    <li>Peak sales periods and time-based patterns</li>
+                    <li>Day-of-week and seasonal behavior analysis</li>
+                    <li>Sales performance insights generation</li>
+                  </ul>
+                  <div class="placeholder-block"
+                    style="background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3);">
+                    <strong style="color: #34d399;">Research Paper Methodology &amp; Benchmarks:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                      <li><strong>Analytical Techniques:</strong> RFM Customer Segmentation, K-Means Clustering,
+                        Association Rule Mining, Mann-Kendall Trend Analysis</li>
+                      <li><strong>Dataset:</strong> 15,420 transactions, 128 products, 12 months simulated bakery &amp;
+                        café records</li>
+                      <li><strong>Evaluation Metrics:</strong> Trend accuracy, clustering quality, association rule
+                        confidence, pattern frequency</li>
+                      <li><strong>Empirical Results:</strong> <strong>91% trend accuracy</strong>, 82% association rule
+                        confidence, 18% inventory optimization, 11% sales increase</li>
+                      <li><strong>Research Paper:</strong> <a href="documents/Research%20papers/IT22151810.pdf"
+                          target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">SmartCost:
+                          Customer Behavior Analysis &amp; Sales Insights System for Micro-SMEs (PDF)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Novelty 3 -->
+          <div id="novelty-3" class="novelty-card glass-card">
+            <div class="novelty-content">
+              <div class="novelty-meta-header">
+                <span class="novelty-num">03</span>
+                <span class="tag-badge tag-amber">Novelty #03</span>
+                <span class="novelty-status">Proposed Research</span>
+              </div>
+              <h3 class="novelty-heading">AI-Based Smart Order Recommendation</h3>
+              <div class="novelty-tagline">Lead Researcher: M. P. J. R. Dasanayaka (IT22152664)</div>
+              <p class="novelty-desc">
+                Investigate an intelligent recommendation approach that suggests relevant additional products based on
+                the current shopping cart or order and historical transaction patterns.
+              </p>
+
+              <details class="novelty-details">
+                <summary>View Research Focus &amp; Details</summary>
+                <div class="novelty-details-content">
+                  <h5>Potential Research Areas:</h5>
+                  <ul>
+                    <li>Neural Collaborative Filtering or another justified ML approach</li>
+                    <li>Historical transaction analysis for pattern mining</li>
+                    <li>Shop-specific product recommendations</li>
+                    <li>Top-K recommendation ranking</li>
+                    <li>Comparison against baselines (e.g., Apriori or FP-Growth)</li>
+                    <li>Evaluation using Precision@K, Recall@K, Hit Rate@K, NDCG@K</li>
+                  </ul>
+                  <p class="research-note">These are possible approaches, not claims that algorithms have already been
+                    implemented.</p>
+                  <div class="placeholder-block"
+                    style="background: rgba(245, 158, 11, 0.08); border-color: rgba(245, 158, 11, 0.3);">
+                    <strong style="color: #fbbf24;">Research Paper Methodology &amp; Benchmarks:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                      <li><strong>Recommendation Engine:</strong> Apriori Association Rule Mining with Support,
+                        Confidence (&gt;=60%), Lift ranking, and real-time Top-N ranking</li>
+                      <li><strong>Dataset:</strong> 15,420 transactions, 128 products, 12 months, 3.8 average cart size
+                      </li>
+                      <li><strong>Evaluation Metrics:</strong> Precision@K, Recall@K, Hit Rate@K, Average Recommendation
+                        Confidence, Latency</li>
+                      <li><strong>Empirical Results:</strong> <strong>84% precision</strong>, 79% recall, 81% hit rate,
+                        82% confidence, <strong>142 ms average response latency</strong>, 18% cross-selling boost</li>
+                      <li><strong>Research Paper:</strong> <a href="documents/Research%20papers/IT22152664.pdf"
+                          target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">SmartCost:
+                          Smart Order Recommendation System for Micro-SMEs (PDF)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Novelty 4 -->
+          <div id="novelty-4" class="novelty-card glass-card">
+            <div class="novelty-content">
+              <div class="novelty-meta-header">
+                <span class="novelty-num">04</span>
+                <span class="tag-badge tag-cyan">Novelty #04</span>
+                <span class="novelty-status">Proposed Research</span>
+              </div>
+              <h3 class="novelty-heading">Sales Trend Analysis and Forecasting</h3>
+              <div class="novelty-tagline">Lead Researcher: K.A.C.H Kodithuwakku (IT22544872)</div>
+              <p class="novelty-desc">
+                Investigate historical sales patterns to identify trends and support business planning, including
+                analysis of growth and decline patterns and seasonal behavior.
+              </p>
+
+              <details class="novelty-details">
+                <summary>View Research Focus &amp; Details</summary>
+                <div class="novelty-details-content">
+                  <h5>Research Focus Areas:</h5>
+                  <ul>
+                    <li>Historical sales analysis and pattern recognition</li>
+                    <li>Sales growth and decline pattern identification</li>
+                    <li>Seasonal or periodic behavior, where supported by data</li>
+                    <li>Trend visualization and interpretation</li>
+                    <li>Forecasting approaches, if included in the approved research</li>
+                    <li>Evaluation and interpretation of findings</li>
+                  </ul>
+                  <div class="placeholder-block"
+                    style="background: rgba(6, 182, 212, 0.08); border-color: rgba(6, 182, 212, 0.3);">
+                    <strong style="color: #67e8f9;">Research Paper Methodology &amp; Benchmarks:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                      <li><strong>Integrated Models:</strong> Prophet &amp; ARIMA Demand Forecasting + Ingredient Cost
+                        Modeling (COGS, Revenue, Profit Margin) + Alert Mechanism (15% margin threshold)</li>
+                      <li><strong>Dataset:</strong> 24-month dataset containing 24,000+ sales and ingredient-cost
+                        records across 50 products</li>
+                      <li><strong>Evaluation Metrics:</strong> MAE, RMSE, Profit Margin Prediction Error, Alert
+                        Precision &amp; Recall</li>
+                      <li><strong>Empirical Results:</strong> <strong>6.4% profit-margin prediction error</strong> (vs
+                        16.8% naive baseline), <strong>89% alert precision</strong>, 14% waste reduction, 17% stock-out
+                        reduction</li>
+                      <li><strong>Research Paper:</strong> <a href="documents/Research%20papers/IT22544872.pdf"
+                          target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline;">SmartCost:
+                          Business Performance Prediction System for Micro-SMEs (PDF)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.7 Technologies Used -->
+        <div id="technologies" class="sub-section">
+          <div class="sub-header">
+            <span class="sub-tag">Section 2.7 • Confirmed Toolchain</span>
+            <h3 class="sub-title">Technologies Used</h3>
+            <p class="sub-desc">
+              Technologies used in the SmartCost research system (note: this showcase website itself uses only HTML and
+              CSS as required).
+            </p>
+          </div>
+
+          <div class="grid-3 tech-grid">
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-blue">Frontend &amp; Mobile</h5>
+              <ul class="tech-list">
+                <li>React Native</li>
+                <li>Next.js &amp; React</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-green">Backend &amp; APIs</h5>
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>Express.js REST APIs</li>
+              </ul>
+            </div>
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-amber">Database &amp; Storage</h5>
+              <ul class="tech-list">
+                <li>MongoDB Atlas</li>
+                <li>SQLite</li>
+              </ul>
+            </div>
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-purple">Machine Learning</h5>
+              <ul class="tech-list">
+                <li>Python</li>
+                <li>Scikit-Learn</li>
+                <li>Data analysis libraries</li>
+              </ul>
+            </div>
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-rose">Mobile Development</h5>
+              <ul class="tech-list">
+                <li>React Native (Cross-platform)</li>
+                <li>Expo</li>
+              </ul>
+            </div>
+            <div class="glass-card tech-card">
+              <h5 class="tech-category tech-cat-cyan">Deployment &amp; Infrastructure</h5>
+              <ul class="tech-list">
+                <li>Cloud Hosting</li>
+                <li>Git Version Control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. MILESTONES SECTION (#milestones) — CSS-only radio tabs
+         ======================================================================== -->
+    <section id="milestones" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Assessment Schedule</span>
+          <h2 class="section-title">Research Project <span class="text-gradient">Milestones</span></h2>
+          <p class="section-desc">
+            University assessment roadmap. Select an assessment below to view its details, marks allocation, and
+            required deliverables.
+          </p>
+        </div>
+
+
+        <!-- CSS-only Radio Tab Selector -->
+        <div class="milestone-tabs">
+          <input type="radio" name="milestone" id="ms-proposal" class="ms-radio" checked />
+          <label for="ms-proposal" class="ms-tab-label">Project Proposal</label>
+
+          <input type="radio" name="milestone" id="ms-pp1" class="ms-radio" />
+          <label for="ms-pp1" class="ms-tab-label">Progress Presentation 1</label>
+
+          <input type="radio" name="milestone" id="ms-pp2" class="ms-radio" />
+          <label for="ms-pp2" class="ms-tab-label">Progress Presentation 2</label>
+
+          <input type="radio" name="milestone" id="ms-final" class="ms-radio" />
+          <label for="ms-final" class="ms-tab-label">Final Assessment</label>
+
+          <input type="radio" name="milestone" id="ms-viva" class="ms-radio" />
+          <label for="ms-viva" class="ms-tab-label">Viva</label>
+
+          <!-- Tab Panels -->
+          <div class="ms-panel ms-panel-proposal">
+            <div class="milestone-card">
+              <div class="milestone-card-header">
+                <div>
+                  <span class="doc-status-badge status-completed">Completed</span>
+                  <h3 class="milestone-title">Project Proposal</h3>
+                  <div class="milestone-date">📅 Assessment Date: March 2026</div>
+                </div>
+                <div class="milestone-marks">
+                  <span class="marks-label">Marks Allocated</span>
+                  <span class="marks-value">12 Marks</span>
+                  <span class="marks-detail">Individual + Group</span>
+                </div>
+              </div>
+              <div class="milestone-body">
+                <div>
+                  <h4 class="milestone-subtitle">Scope &amp; Overview</h4>
+                  <p class="milestone-desc">Proposal report and presentation covering research novelty identification,
+                    literature survey foundation, technical feasibility, and supervisor endorsement.</p>
+                </div>
+                <div>
+                  <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Project Charter &amp; Team Scope Definition • <a
+                      href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf" target="_blank"
+                      rel="noopener" style="color: #38bdf8; text-decoration: underline;">View Charter (PDF)</a></div>
+                  <div class="deliverable-item">✓ Formal Proposal Reports (4 Individual Reports) • <a href="#documents"
+                      style="color: #38bdf8; text-decoration: underline;">View in Documents (PDFs)</a></div>
+                  <div class="deliverable-item">✓ Literature Survey Matrix &amp; Gap Identification</div>
+                  <div class="deliverable-item">✓ Proposal Presentation Slides • <a
+                      href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf" target="_blank"
+                      rel="noopener" style="color: #38bdf8; text-decoration: underline;">View Slides (PDF)</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ms-panel ms-panel-pp1">
+            <div class="milestone-card">
+              <div class="milestone-card-header">
+                <div>
+                  <span class="doc-status-badge status-completed">Completed</span>
+                  <h3 class="milestone-title">Progress Presentation 1</h3>
+                  <div class="milestone-date">📅 Assessment Date: June 2026</div>
+                </div>
+                <div class="milestone-marks">
+                  <span class="marks-label">Marks Allocated</span>
+                  <span class="marks-value">15 Marks</span>
+                  <span class="marks-detail">Individual + Group</span>
+                </div>
+              </div>
+              <div class="milestone-body">
+                <div>
+                  <h4 class="milestone-subtitle">Scope &amp; Overview</h4>
+                  <p class="milestone-desc">Present progress of the individual and group components. First milestone
+                    evaluation reviewing formulation of the 4 novelties, initial dataset curation, and foundational
+                    architecture.</p>
+                </div>
+                <div>
+                  <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Model formulation documentation</div>
+                  <div class="deliverable-item">✓ Dataset preparation progress</div>
+                  <div class="deliverable-item">✓ Draft Architecture Specification</div>
+                  <div class="deliverable-item">✓ Progress Presentation 1 Slides • <a
+                      href="documents/presentation/R26-IT-026%20Research%20PP1.pdf" target="_blank" rel="noopener"
+                      style="color: #38bdf8; text-decoration: underline;">View Slides (PDF)</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ms-panel ms-panel-pp2">
+            <div class="milestone-card">
+              <div class="milestone-card-header">
+                <div>
+                  <span class="doc-status-badge status-completed">Completed</span>
+                  <h3 class="milestone-title">Progress Presentation 2</h3>
+                  <div class="milestone-date">📅 Assessment Date: August 2026</div>
+                </div>
+                <div class="milestone-marks">
+                  <span class="marks-label">Marks Allocated</span>
+                  <span class="marks-value">18 Marks</span>
+                  <span class="marks-detail">Individual + Group</span>
+                </div>
+              </div>
+              <div class="milestone-body">
+                <div>
+                  <h4 class="milestone-subtitle">Scope &amp; Overview</h4>
+                  <p class="milestone-desc">Present progress of the individual and group components. Second milestone
+                    evaluation reviewing implementation progress, working prototype, and benchmark results.</p>
+                </div>
+                <div>
+                  <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Working prototype demonstration</div>
+                  <div class="deliverable-item">✓ Implementation progress report</div>
+                  <div class="deliverable-item">✓ Preliminary evaluation results</div>
+                  <div class="deliverable-item">✓ Progress Presentation 2 Slides • <a
+                      href="documents/presentation/R26-IT-026%20Research%20PP2%20Presentation.pdf" target="_blank"
+                      rel="noopener" style="color: #38bdf8; text-decoration: underline;">View Slides (PDF)</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ms-panel ms-panel-final">
+            <div class="milestone-card">
+              <div class="milestone-card-header">
+                <div>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                  <h3 class="milestone-title">Final Assessment</h3>
+                  <div class="milestone-date">📅 Assessment Date: October 2026</div>
+                </div>
+                <div class="milestone-marks">
+                  <span class="marks-label">Marks Allocated</span>
+                  <span class="marks-value">40 Marks</span>
+                  <span class="marks-detail">Individual + Group</span>
+                </div>
+              </div>
+              <div class="milestone-body">
+                <div>
+                  <h4 class="milestone-subtitle">Scope &amp; Overview</h4>
+                  <p class="milestone-desc">Individual and Group reports, Final presentation, and website. Comprehensive
+                    evaluation of the completed SmartCost research platform, system validation, and submission of the
+                    final thesis.</p>
+                </div>
+                <div>
+                  <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Final Research Thesis (Individual + Group reports)</div>
+                  <div class="deliverable-item">✓ Final Presentation</div>
+                  <div class="deliverable-item">✓ Project Website</div>
+                  <div class="deliverable-item">✓ End-to-end system demonstration</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ms-panel ms-panel-viva">
+            <div class="milestone-card">
+              <div class="milestone-card-header">
+                <div>
+                  <span class="doc-status-badge status-pending">Upcoming</span>
+                  <h3 class="milestone-title">Viva</h3>
+                  <div class="milestone-date">📅 Assessment Date: November 2026</div>
+                </div>
+                <div class="milestone-marks">
+                  <span class="marks-label">Marks Allocated</span>
+                  <span class="marks-value">15 Marks</span>
+                  <span class="marks-detail">Individual</span>
+                </div>
+              </div>
+              <div class="milestone-body">
+                <div>
+                  <h4 class="milestone-subtitle">Scope &amp; Overview</h4>
+                  <p class="milestone-desc">Individual viva examination before the academic faculty panel covering
+                    individual novelty contributions, algorithmic rigor, and research findings.</p>
+                </div>
+                <div>
+                  <h4 class="milestone-subtitle">Key Deliverables</h4>
+                  <div class="deliverable-item">✓ Individual research component defense</div>
+                  <div class="deliverable-item">✓ Examiner question &amp; answer session</div>
+                  <div class="deliverable-item">✓ Demonstration of individual contribution</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Marks Summary -->
+        <div class="glass-card marks-summary">
+          <h4 class="marks-summary-title">Total Assessment: 100 Marks</h4>
+          <div class="marks-breakdown">
+            <div class="marks-item"><span>Proposal</span><span>12 Marks</span></div>
+            <div class="marks-item"><span>Progress Presentation 1</span><span>15 Marks</span></div>
+            <div class="marks-item"><span>Progress Presentation 2</span><span>18 Marks</span></div>
+            <div class="marks-item"><span>Final Assessment</span><span>40 Marks</span></div>
+            <div class="marks-item"><span>Viva</span><span>15 Marks</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. DOCUMENTS SECTION (#documents) — CSS-only radio filtering
+         ======================================================================== -->
+    <section id="documents" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Repository</span>
+          <h2 class="section-title">Research <span class="text-gradient">Documents</span></h2>
+          <p class="section-desc">
+            Access project charters, research proposals, checklists, research papers, and final
+            academic reports.
+          </p>
+        </div>
+
+        <!-- CSS-only filter tabs -->
+        <div class="doc-filter-tabs">
+          <input type="radio" name="doc-filter" id="doc-all" class="doc-radio" checked />
+          <label for="doc-all" class="doc-tab-label">All Documents</label>
+
+          <input type="radio" name="doc-filter" id="doc-charter" class="doc-radio" />
+          <label for="doc-charter" class="doc-tab-label">Project Charter</label>
+
+          <input type="radio" name="doc-filter" id="doc-proposal" class="doc-radio" />
+          <label for="doc-proposal" class="doc-tab-label">Proposal Reports</label>
+
+          <input type="radio" name="doc-filter" id="doc-research" class="doc-radio" />
+          <label for="doc-research" class="doc-tab-label">Research Paper</label>
+
+          <input type="radio" name="doc-filter" id="doc-final" class="doc-radio" />
+          <label for="doc-final" class="doc-tab-label">Final Reports</label>
+
+          <input type="radio" name="doc-filter" id="doc-checklist" class="doc-radio" />
+          <label for="doc-checklist" class="doc-tab-label">Check Lists</label>
+
+          <div class="doc-grid">
+            <!-- Project Charter -->
+            <div class="glass-card doc-card" data-cat="charter">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Project Charter</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Project Charter Document</h4>
+                <p class="doc-desc">Formal project charter outlining research scope, stakeholder commitments, initial
+                  timeline, and supervisor endorsements.</p>
+                <div class="doc-meta-detail">
+                  <small>👥 Group Project Charter &amp; Research Scope Presentation (SLIIT)</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Charter</a>
+                  <a href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf"
+                    class="btn btn-primary btn-sm" download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Proposal Report (Individual - Member 1) -->
+            <div class="glass-card doc-card" data-cat="proposal">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Proposal (Individual)</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Individual Proposal: Sales Trend Forecasting</h4>
+                <p class="doc-desc">Individual research proposal by K.A.C.H Kodithuwakku (IT22544872) covering novelty
+                  formulation, data methodology, and forecast metrics.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: K.A.C.H Kodithuwakku (IT22544872) • SLIIT Computing</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22544872_compressed.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Proposal</a>
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22544872_compressed.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proposal Report (Individual - Member 2) -->
+            <div class="glass-card doc-card" data-cat="proposal">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Proposal (Individual)</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Individual Proposal: Customer Behavior Analysis</h4>
+                <p class="doc-desc">Individual research proposal by Perera N.K.M (IT22151810) detailing customer
+                  clustering algorithms and basket association mining.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: Perera N.K.M (IT22151810) • SLIIT Computing</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22151810_compressed.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Proposal</a>
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22151810_compressed.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proposal Report (Individual - Member 3) -->
+            <div class="glass-card doc-card" data-cat="proposal">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Proposal (Individual)</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Individual Proposal: Product Demand Prediction</h4>
+                <p class="doc-desc">Individual research proposal by D.D.M. Jayasingha (IT22162250) detailing time-series
+                  demand models and inventory optimization.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: D.D.M. Jayasingha (IT22162250) • SLIIT Computing</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22162250_compressed.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Proposal</a>
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22162250_compressed.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Proposal Report (Individual - Member 4) -->
+            <div class="glass-card doc-card" data-cat="proposal">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Proposal (Individual)</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Individual Proposal: Smart Order Recommendation</h4>
+                <p class="doc-desc">Individual research proposal by M. P. J. R. Dasanayaka (IT22152664) detailing
+                  collaborative filtering and real-time checkout suggestions.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: M. P. J. R. Dasanayaka (IT22152664) • SLIIT Computing</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22152664_compressed.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Proposal</a>
+                  <a href="documents/Proposal%20DOC/R26-IT-026_IT22152664_compressed.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Research Paper 1 (Main Group Paper) -->
+            <div class="glass-card doc-card" data-cat="research">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Main Research Paper</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">SmartCost: A Hybrid AI-Driven POS and Cost Analytics System for Micro-SMEs</h4>
+                <p class="doc-desc">Overarching IEEE conference paper detailing the 4-module architecture (Demand,
+                  Profit, Behavior, Recommendation) achieving 91% forecasting accuracy and 18% inventory waste
+                  reduction.</p>
+                <div class="doc-meta-detail">
+                  <small>👥 K.A.C.H Kodithuwakku, M.P.J.R. Dasanayaka, D.D.M Jayasingha, N.K.M. Perera</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Research%20papers/R26-IT-026_Research%20paper.pdf" class="btn btn-secondary btn-sm"
+                    target="_blank" rel="noopener">📄 View Paper</a>
+                  <a href="documents/Research%20papers/R26-IT-026_Research%20paper.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Research Paper 2 (Demand Forecasting - Jayasingha) -->
+            <div class="glass-card doc-card" data-cat="research">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Research Paper #01</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">SmartCost: Product Demand Prediction System for Micro-SMEs</h4>
+                <p class="doc-desc">Evaluates ARIMA and Prophet models on 2-year daily sales records across 50 products.
+                  Prophet achieved 8.7% MAPE (vs 12.4% ARIMA) and reduced RMSE by 18%.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: D.D.M Jayasingha (IT22162250) • 24-Month Dataset, 50 Products</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Research%20papers/IT22162250.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                    rel="noopener">📄 View Paper</a>
+                  <a href="documents/Research%20papers/IT22162250.pdf" class="btn btn-primary btn-sm" download>⬇️
+                    Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Research Paper 3 (Customer Behavior Analysis - Perera) -->
+            <div class="glass-card doc-card" data-cat="research">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-emerald">Research Paper #02</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">SmartCost: Customer Behavior Analysis &amp; Sales Insights System for Micro-SMEs
+                </h4>
+                <p class="doc-desc">Applies transactional data mining, RFM segmentation, K-Means clustering, and
+                  Mann-Kendall trend detection on 15,420 transactions with 91% trend accuracy and 82% rule confidence.
+                </p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: N.K.M. Perera (IT22151810) • 15,420 Transactions, 128 Products</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Research%20papers/IT22151810.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                    rel="noopener">📄 View Paper</a>
+                  <a href="documents/Research%20papers/IT22151810.pdf" class="btn btn-primary btn-sm" download>⬇️
+                    Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Research Paper 4 (Smart Order Recommendation - Dasanayaka) -->
+            <div class="glass-card doc-card" data-cat="research">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-amber">Research Paper #03</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">SmartCost: Smart Order Recommendation System for Micro-SMEs</h4>
+                <p class="doc-desc">Real-time POS checkout recommendation engine using Apriori association rule mining.
+                  Achieved 84% precision, 79% recall, and 142 ms response latency.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: M.P.J.R. Dasanayaka (IT22152664) • 15,420 Transactions, 3.8 Cart Size</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Research%20papers/IT22152664.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                    rel="noopener">📄 View Paper</a>
+                  <a href="documents/Research%20papers/IT22152664.pdf" class="btn btn-primary btn-sm" download>⬇️
+                    Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Research Paper 5 (Business Performance Prediction - Kodithuwakku) -->
+            <div class="glass-card doc-card" data-cat="research">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-cyan">Research Paper #04</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">SmartCost: Business Performance Prediction System for Micro-SMEs</h4>
+                <p class="doc-desc">Couples demand forecasting with ingredient-level cost modeling to predict COGS,
+                  profit, and margins. Achieved 6.4% margin prediction error and 89% alert precision.</p>
+                <div class="doc-meta-detail">
+                  <small>👤 Lead: K.A.C.H Kodithuwakku (IT22544872) • 24,000+ Records Across 50 Products</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/Research%20papers/IT22544872.pdf" class="btn btn-secondary btn-sm" target="_blank"
+                    rel="noopener">📄 View Paper</a>
+                  <a href="documents/Research%20papers/IT22544872.pdf" class="btn btn-primary btn-sm" download>⬇️
+                    Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Final Report (Main Group Thesis) -->
+            <div class="glass-card doc-card" data-cat="final">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Final Report (Main)</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Final Research Thesis (Main Group)</h4>
+                <p class="doc-desc">Comprehensive group final dissertation covering system design, architecture,
+                  integrated evaluations, and joint conclusions.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-report-group.pdf</span>
+              </div>
+            </div>
+
+            <!-- Final Report (Individual - Member 1) -->
+            <div class="glass-card doc-card" data-cat="final">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Final (Individual 1)</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Individual Thesis: Sales Trend Forecasting</h4>
+                <p class="doc-desc">K.A.C.H Kodithuwakku (IT22544872) — Individual final thesis covering time-series
+                  models, metrics, and experimental results.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-report-kodithuwakku.pdf</span>
+              </div>
+            </div>
+
+            <!-- Final Report (Individual - Member 2) -->
+            <div class="glass-card doc-card" data-cat="final">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Final (Individual 2)</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Individual Thesis: Customer Behavior Analysis</h4>
+                <p class="doc-desc">Perera N.K.M (IT22151810) — Individual final thesis covering customer segmentation,
+                  transaction mining, and behavior patterns.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-report-perera.pdf</span>
+              </div>
+            </div>
+
+            <!-- Final Report (Individual - Member 3) -->
+            <div class="glass-card doc-card" data-cat="final">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Final (Individual 3)</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Individual Thesis: Product Demand Prediction</h4>
+                <p class="doc-desc">D.D.M. Jayasingha (IT22162250) — Individual final thesis covering demand prediction
+                  algorithms, evaluations, and inventory impacts.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-report-jayasingha.pdf</span>
+              </div>
+            </div>
+
+            <!-- Final Report (Individual - Member 4) -->
+            <div class="glass-card doc-card" data-cat="final">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-purple">Final (Individual 4)</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Individual Thesis: Smart Order Recommendation</h4>
+                <p class="doc-desc">M. P. J. R. Dasanayaka (IT22152664) — Individual final thesis covering
+                  recommendation engine architectures and checkout validation.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-report-dasanayaka.pdf</span>
+              </div>
+            </div>
+
+            <!-- Checklists - Proposal -->
+            <div class="glass-card doc-card" data-cat="checklist">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-emerald">Check List</span>
+                  <span class="doc-status-badge status-completed">Available</span>
+                </div>
+                <h4 class="doc-title">Proposal Assessment Checklist</h4>
+                <p class="doc-desc">SLIIT research proposal checklist confirming topic clearance, supervisor approvals,
+                  and novelty criteria.</p>
+                <div class="doc-meta-detail">
+                  <small>📋 Assessment: Proposal Presentation • Document: R26-IT_02_Checklist 1</small>
+                </div>
+              </div>
+              <div class="doc-card-bottom">
+                <div class="doc-actions">
+                  <a href="documents/checked%20list%2001/R26-IT_02_Checklist%201%20.pdf"
+                    class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📄 View Checklist</a>
+                  <a href="documents/checked%20list%2001/R26-IT_02_Checklist%201%20.pdf" class="btn btn-primary btn-sm"
+                    download>⬇️ Download PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Checklists - Progress & Final -->
+            <div class="glass-card doc-card" data-cat="checklist">
+              <div class="doc-card-top">
+                <div class="doc-card-meta">
+                  <span class="tag-badge tag-emerald">Check List</span>
+                  <span class="doc-status-badge status-inprogress">In Progress</span>
+                </div>
+                <h4 class="doc-title">Final Thesis Submission Checklist</h4>
+                <p class="doc-desc">Faculty compliance checklist covering CDAP formatting rules, originality reports,
+                  and code artifact requirements.</p>
+              </div>
+              <div class="doc-card-bottom">
+                <span class="doc-pending-notice">⏳ PDF will be added to documents/final-checklist.pdf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. PRESENTATIONS SECTION (#presentations)
+         ======================================================================== -->
+    <section id="presentations" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Slide Decks</span>
+          <h2 class="section-title">Presentations &amp; <span class="text-gradient">Slide Repository</span></h2>
+          <p class="section-desc">
+            Access slides used for academic reviews, milestone assessments, and final project defense.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Proposal Presentation -->
+          <div class="glass-card doc-card">
+            <div class="doc-card-top">
+              <div class="doc-card-meta">
+                <span class="tag-badge tag-cyan">Proposal Stage</span>
+                <span class="doc-status-badge status-completed">Available</span>
+              </div>
+              <h4 class="doc-title">Proposal Presentation Slides</h4>
+              <p class="doc-desc">Initial academic proposal presentation defending project motivation, SME challenges,
+                and novelty identification.</p>
+              <div class="doc-meta-detail">
+                <small>📊 Presentation Deck • File: R26-IT-026 Research Proposal Presentation</small>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <div class="doc-actions">
+                <a href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf"
+                  class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📊 View Slides</a>
+                <a href="documents/presentation/R26-IT-026%20Research%20Proposal%20Presentation.pdf"
+                  class="btn btn-primary btn-sm" download>⬇️ Download PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Presentation 1 -->
+          <div class="glass-card doc-card">
+            <div class="doc-card-top">
+              <div class="doc-card-meta">
+                <span class="tag-badge tag-cyan">Progress Stage 1</span>
+                <span class="doc-status-badge status-completed">Available</span>
+              </div>
+              <h4 class="doc-title">Progress Presentation 1 Slides</h4>
+              <p class="doc-desc">Progress review deck detailing literature survey findings, formulation of the 4
+                research novelties, and dataset preparation.</p>
+              <div class="doc-meta-detail">
+                <small>📊 Presentation Deck • File: R26-IT-026 Research PP1</small>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <div class="doc-actions">
+                <a href="documents/presentation/R26-IT-026%20Research%20PP1.pdf" class="btn btn-secondary btn-sm"
+                  target="_blank" rel="noopener">📊 View Slides</a>
+                <a href="documents/presentation/R26-IT-026%20Research%20PP1.pdf" class="btn btn-primary btn-sm"
+                  download>⬇️ Download PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Presentation 2 -->
+          <div class="glass-card doc-card">
+            <div class="doc-card-top">
+              <div class="doc-card-meta">
+                <span class="tag-badge tag-amber">Progress Stage 2</span>
+                <span class="doc-status-badge status-completed">Available</span>
+              </div>
+              <h4 class="doc-title">Progress Presentation 2 Slides</h4>
+              <p class="doc-desc">Second progress review covering implementation status, working prototype, evaluation
+                benchmarks, and revised research timelines.</p>
+              <div class="doc-meta-detail">
+                <small>📊 Presentation Deck • File: R26-IT-026 Research PP2 Presentation</small>
+              </div>
+            </div>
+            <div class="doc-card-bottom">
+              <div class="doc-actions">
+                <a href="documents/presentation/R26-IT-026%20Research%20PP2%20Presentation.pdf"
+                  class="btn btn-secondary btn-sm" target="_blank" rel="noopener">📊 View Slides</a>
+                <a href="documents/presentation/R26-IT-026%20Research%20PP2%20Presentation.pdf"
+                  class="btn btn-primary btn-sm" download>⬇️ Download PDF</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Presentation -->
+          <div class="glass-card doc-card">
+            <div class="doc-card-top">
+              <div class="doc-card-meta">
+                <span class="tag-badge tag-purple">Final Defense</span>
+                <span class="doc-status-badge status-inprogress">In Progress</span>
+              </div>
+              <h4 class="doc-title">Final Assessment Presentation</h4>
+              <p class="doc-desc">Comprehensive research presentation covering the end-to-end SmartCost platform,
+                research findings, and evaluation results.</p>
+            </div>
+            <div class="doc-card-bottom">
+              <span class="doc-pending-notice">⏳ Slides will be uploaded when available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. ABOUT US SECTION (#about-us)
+         ======================================================================== -->
+    <section id="about-us" class="section-padding section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Project Team</span>
+          <h2 class="section-title">The Minds Behind <span class="text-gradient">SmartCost</span></h2>
+          <p class="section-desc">
+            Guided by academic supervisors and engineered by student researchers at the Sri Lanka Institute of
+            Information Technology (SLIIT).
+          </p>
+        </div>
+
+        <!-- Academic Guidance / Supervisors -->
+        <div class="team-section-heading">
+          <span class="team-section-tag">Academic Guidance &amp; Leadership</span>
+          <h3 class="team-section-title">Project Leadership &amp; Supervision</h3>
+        </div>
+
+        <div class="grid-2 supervisor-grid">
+          <!-- Supervisor -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-deemantha.png" alt="Mr. Deemantha Siriwardana" class="team-photo" />
+              </div>
+              <h4 class="team-name">Mr. Deemantha Siriwardana</h4>
+              <span class="team-id team-id-supervisor">SUPERVISOR</span>
+              <p class="team-role">Academic Project Supervisor</p>
+              <p class="team-bio">Guiding research formulation, algorithmic feasibility, and overall academic rigor.</p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:deemantha.s@sliit.lk" class="team-email">✉️ deemantha.s@sliit.lk</a>
+            </div>
+          </div>
+
+          <!-- Co-Supervisor -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-ayesha.png" alt="Miss. Ayesha Wijesooriya" class="team-photo" />
+              </div>
+              <h4 class="team-name">Miss. Ayesha Wijesooriya</h4>
+              <span class="team-id team-id-cosupervisor">CO-SUPERVISOR</span>
+              <p class="team-role">Academic Project Co-Supervisor</p>
+              <p class="team-bio">Supervising system architecture, empirical evaluation metrics, and quality compliance.
+              </p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:ayesha.w@sliit.lk" class="team-email">✉️ ayesha.w@sliit.lk</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Researchers -->
+        <div class="team-section-heading">
+          <span class="team-section-tag">Core Contributors</span>
+          <h3 class="team-section-title">Research Team &amp; Novelty Ownership</h3>
+        </div>
+
+        <div class="team-grid">
+          <!-- Student 1 -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-kodithuwakku.png" alt="K.A.C.H Kodithuwakku" class="team-photo" />
+              </div>
+              <h4 class="team-name">K.A.C.H Kodithuwakku</h4>
+              <span class="team-id">IT22544872</span>
+              <p class="team-role-highlight">Sales Trend Analysis &amp; Forecasting</p>
+              <p class="team-bio">Responsible for trend modeling, sales pattern analysis, and forecasting approaches for
+                SME viability metrics.</p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:it22544872@my.sliit.lk" class="team-email">✉️ it22544872@my.sliit.lk</a>
+            </div>
+          </div>
+
+          <!-- Student 2 -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-perera.png" alt="Perera N.K.M" class="team-photo" />
+              </div>
+              <h4 class="team-name">Perera N.K.M</h4>
+              <span class="team-id">IT22151810</span>
+              <p class="team-role-highlight">Customer Behavior Analysis</p>
+              <p class="team-bio">Responsible for transaction clustering, customer segmentation, and peak-hour sales
+                pattern mining.</p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:it22151810@my.sliit.lk" class="team-email">✉️ it22151810@my.sliit.lk</a>
+            </div>
+          </div>
+
+          <!-- Student 3 -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-jayasingha.png" alt="D.D.M. Jayasingha" class="team-photo" />
+              </div>
+              <h4 class="team-name">D.D.M. Jayasingha</h4>
+              <span class="team-id">IT22162250</span>
+              <p class="team-role-highlight">Product Demand Prediction</p>
+              <p class="team-bio">Responsible for time-series demand forecasting, model formulation, and inventory
+                optimization research.</p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:it22162250@my.sliit.lk" class="team-email">✉️ it22162250@my.sliit.lk</a>
+            </div>
+          </div>
+
+          <!-- Student 4 -->
+          <div class="glass-card team-card">
+            <div>
+              <div class="team-photo-wrap">
+                <img src="images/team-dasanayaka.png" alt="M. P. J. R. Dasanayaka" class="team-photo" />
+              </div>
+              <h4 class="team-name">M. P. J. R. Dasanayaka</h4>
+              <span class="team-id">IT22152664</span>
+              <p class="team-role-highlight">Smart Order Recommendation</p>
+              <p class="team-bio">Responsible for recommendation model research, basket analysis, and real-time checkout
+                suggestions.</p>
+            </div>
+            <div class="team-contact">
+              <a href="mailto:it22152664@my.sliit.lk" class="team-email">✉️ it22152664@my.sliit.lk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. CONTACT US SECTION (#contact-us)
+         ======================================================================== -->
+    <section id="contact-us" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Inquiries</span>
+          <h2 class="section-title">Contact <span class="text-gradient">Project Team</span></h2>
+          <p class="section-desc">
+            Connect with the SmartCost student researchers and academic supervisors.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Department Information -->
+          <div class="glass-card">
+            <span class="contact-dept-label">University Department</span>
+            <h3 class="contact-university">Sri Lanka Institute of Information Technology</h3>
+            <p class="contact-faculty">Faculty of Computing • Department of Computer Science &amp; Software Engineering
+            </p>
+
+            <div class="contact-details">
+              <p>📍 <strong>Campus:</strong> Malabe Campus, New Kandy Road, Malabe, Sri Lanka</p>
+              <p>✉️ <strong>Project Email:</strong> <a href="mailto:smartcost.research@gmail.com"
+                  class="contact-link">smartcost.research@gmail.com</a></p>
+              <p>📞 <strong>Phone:</strong> +94 11 754 4801 (SLIIT General Line)</p>
+            </div>
+
+            <div class="contact-note">
+              ℹ️ <strong>Note:</strong> This website is a frontend-only research showcase. For direct inquiries, please
+              use the email addresses above or the mailto link in the form.
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card">
+            <h4 class="form-title">Send an Inquiry</h4>
+            <p class="form-subtitle">
+              This form opens your default email client. No server-side processing is used.
+            </p>
+
+            <form action="mailto:smartcost.research@gmail.com" method="post" enctype="text/plain">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="Name" class="form-control" placeholder="e.g. Dr. Jane Smith"
+                  required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Your Email Address</label>
+                <input type="email" id="cf-email" name="Email" class="form-control"
+                  placeholder="e.g. jsmith@university.edu" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="Subject" class="form-control"
+                  placeholder="e.g. Research Collaboration" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cf-message">Message</label>
+                <textarea id="cf-message" name="Message" class="form-control" rows="4"
+                  placeholder="Describe your inquiry or question..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                Send via Email Client
+              </button>
+            </form>
+
+            <p class="form-mailto-note">
+              Or email directly: <a href="mailto:smartcost.research@gmail.com"
+                class="contact-link">smartcost.research@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="logo-wrap footer-logo">
+            <img src="images/logo.jpg" alt="SmartCost Logo" class="logo-img" />
+            <span class="logo-text">Smart<span class="brand-cyan">Cost</span></span>
+          </a>
+          <p class="footer-desc">
+            Research Group: R26-IT-026
+          </p>
+          <span class="footer-badge">SLIIT CDAP Research 2026</span>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Research Domain</h5>
+          <ul class="footer-links">
+            <li><a href="#literature-survey">Literature Survey</a></li>
+            <li><a href="#research-gap">Research Gap</a></li>
+            <li><a href="#research-problem">Research Problem</a></li>
+            <li><a href="#research-objectives">Research Objectives</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#research-novelties">Research Novelties</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Project</h5>
+          <ul class="footer-links">
+            <li><a href="#milestones">Milestones</a></li>
+            <li><a href="#documents">Research Documents</a></li>
+            <li><a href="#presentations">Presentations</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="footer-heading">Team &amp; Contact</h5>
+          <ul class="footer-links">
+            <li><a href="#about-us">About Us &amp; Team</a></li>
+            <li><a href="#contact-us">Contact Information</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 SmartCost • University Research Project • Faculty of Computing, SLIIT.</span>
+        <span>Technology: HTML5 &amp; CSS3</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navigation & ScrollSpy Script -->
+  <script src="js/nav.js"></script>
+</body>
+
+</html>
